@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="contenedor">
+    <div class="principal">
+      <div class="armadura caja"></div>
+      <div class="caja uno"></div>
+      <div class="caja dos"></div>
+      <div class="caja tres"></div>
+      <div class="caja cuatro"></div>
+      <div class="caja cinco"></div>
+      <div class="caja seis"></div>
+    </div>
+  </div>
+  <style>
+    body{
+      margin: 0%;
+      padding: 0;
+      display: flex;
+      overflow: hidden;
+    }
+    div{
+      border: solid 0.1px black;
+    }
+    .contenedor{
+      position: absolute;
+      width: 25vw;
+      height: 100vh;
+      background: linear-gradient(45deg,#388181,#3f4242);
+    }
+    .principal{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      left: 0;
+      bottom: 100px;
+      right: 0;
+      perspective: -1000px;
+      transform-style: preserve-3d;
+      animation: girar 5s linear infinite;
+    }
+    @keyframes girar {
+      from{
+        transform:rotateY(0deg);
+      }
+      to{
+        transform:rotateY(360deg);
+      }
+    }
+    .caja{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: url(logo.jfif);
+      background-position: cover;
+      background-size: cover;
+    }
+    .uno{
+      bottom: -50px;    
+      transform: rotateX(90deg);
+    }
+    .dos{
+      left: -100px;
+      transform: rotatey(90deg);
+    }
+    .tres{
+      right: -100px;
+      transform: rotatey(90deg);
+    }
+    .cuatro{
+      top: -100px;
+      transform: rotateX(90deg);
+    }
+    .cinco{
+      transform: translateZ(-100px);
+    }
+    .seis{
+      transform: translateZ(100px);
+    }
+    .armadura{
+      width: 190px;
+      height: 200px;
+      top: 0px;
+      background: url(seya.jpg);
+      background-position:center;
+      background-size: 200px 200px;
+      background-repeat: no-repeat;
+      transition: 2s;
+
+    }
+  </style>
+  <script>
+
+    let caja = document.querySelector(".contenedor");
+    let caja2 = document.querySelector(".armadura");
+    caja.addEventListener("click",tocar,false);
+    caja.addEventListener("dblclick",tocar2,false);
+
+    function tocar(){
+      caja2.style.top="-300px";
+    }
+    function tocar2(){
+      caja2.style.top="0px";
+    }
+
+
+  </script>
+
+</body>
+
+</html>
