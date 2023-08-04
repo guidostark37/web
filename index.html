@@ -8,15 +8,64 @@
 </head>
 
 <body>
+
   <div class="contenedor">
+    <div class="armadura caja "></div>
     <div class="principal">
-      <div class="armadura caja"></div>
       <div class="caja uno"></div>
       <div class="caja dos"></div>
       <div class="caja tres"></div>
       <div class="caja cuatro"></div>
       <div class="caja cinco"></div>
       <div class="caja seis"></div>
+    </div>
+  </div>
+
+  <div class="contenedor1">
+    <div class="armadura1 caja1"></div>
+    <div class="principal">
+      <div class="caja1 uno"></div>
+      <div class="caja1 dos"></div>
+      <div class="caja1 tres"></div>
+      <div class="caja1 cuatro"></div>
+      <div class="caja1 cinco"></div>
+      <div class="caja1 seis"></div>
+    </div>
+  </div>
+
+  <div class="contenedor2">
+    <div class="armadura2 caja2"></div>
+    <div class="principal">
+      <div class="caja2 uno"></div>
+      <div class="caja2 dos"></div>
+      <div class="caja2 tres"></div>
+      <div class="caja2 cuatro"></div>
+      <div class="caja2 cinco"></div>
+      <div class="caja2 seis"></div>
+    </div>
+  </div>
+
+  <div class="contenedor3">
+    <div class="armadura3 caja3"></div>
+    <div class="principal">
+      <div class="caja3 uno"></div>
+      <div class="caja3 dos"></div>
+      <div class="caja3 tres"></div>
+      <div class="caja3 cuatro"></div>
+      <div class="caja3 cinco"></div>
+      <div class="caja3 seis"></div>
+    </div>
+  </div>
+
+  <div class="contenedor4">
+    <div class="armadura4 caja4"></div>
+    <div class="principal">
+      <div class="caja4 uno"></div>
+      <div class="caja4 dos"></div>
+      <div class="caja4 tres"></div>
+      <div class="caja4 cuatro"></div>
+      <div class="caja4 cinco"></div>
+      <div class="caja4 seis"></div>
     </div>
   </div>
   <style>
@@ -31,9 +80,37 @@
     }
     .contenedor{
       position: absolute;
-      width: 25vw;
+      width: 20vw;
       height: 100vh;
-      background: linear-gradient(45deg,#388181,#3f4242);
+      background: linear-gradient(45deg,#000,#1a1955);
+    }
+    .contenedor1{
+      position: relative;
+      left: 20vw;
+      width: 20vw;
+      height: 100vh;
+      background: linear-gradient(45deg,#388181,#e8eeee);
+    }
+    .contenedor2{
+      position: relative;
+      left: 20vw;
+      width: 20vw;
+      height: 100vh;
+      background: linear-gradient(45deg,#64a7d3,#e0e4e4);
+    }
+    .contenedor3{
+      position: relative;
+      left: 20vw;
+      width: 20vw;
+      height: 100vh;
+      background: linear-gradient(45deg,#8f3b0a,#e0e4e4);
+    }
+    .contenedor4{
+      position: relative;
+      left: 20vw;
+      width: 20vw;
+      height: 100vh;
+      background: linear-gradient(45deg,#a83cac,#e0e4e4);
     }
     .principal{
       position: absolute;
@@ -88,28 +165,137 @@
     .armadura{
       width: 190px;
       height: 200px;
-      top: 0px;
-      background: url(seya.jpg);
+      top: 635px;
+      left: 80px;
+      background: url(caballeros-del-zodiaco.gif);
       background-position:center;
       background-size: 200px 200px;
       background-repeat: no-repeat;
       transition: 2s;
-
     }
-  </style>
-  <script>
+    .caja1{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: url(dragon.jpg);
+      background-position: cover;
+      background-size: cover;
+    }
+    .caja2{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: url(cisne.jpg);
+      background-position: cover;
+      background-size: cover;
+    }
+    .caja3{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: url(fenix.jpg);
+      background-position: cover;
+      background-size: cover;
+    }
+    .caja4{
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background: url(andromeda.jpg);
+      background-position: cover;
+      background-size: cover;
+    }
+    .armadura1{
+      width: 190px;
+      height: 200px;
+      top: 635px;
+      left: 80px;
+      background: url(siryu.gif);
+      background-position:center;
+      background-size: 200px 200px;
+      background-repeat: no-repeat;
+      transition: 2s;
+    }
+    .armadura2{
+      width: 190px;
+      height: 200px;
+      top: 635px;
+      left: 80px;
+      background: url(hioga.gif);
+      background-position:center;
+      background-size: 200px 200px;
+      background-repeat: no-repeat;
+      transition: 2s;
+    }
+    .armadura3{
+      width: 190px;
+      height: 200px;
+      top: 635px;
+      left: 80px;
+      background: url(ave-fénix-ikki.gif);
+      background-position:center;
+      background-size: 200px 200px;
+      background-repeat: no-repeat;
+      transition: 2s;
+    }
+    .armadura4{
+      width: 190px;
+      height: 200px;
+      top: 635px;
+      left: 80px;
+      background: url(shon.gif);
+      background-position:center;
+      background-size: 200px 200px;
+      background-repeat: no-repeat;
+      transition: 2s;
+    }
 
+  </style>
+
+  <script>
+    let con=0
     let caja = document.querySelector(".contenedor");
     let caja2 = document.querySelector(".armadura");
-    caja.addEventListener("click",tocar,false);
-    caja.addEventListener("dblclick",tocar2,false);
+    let prin = document.querySelector(".principal")
 
-    function tocar(){
-      caja2.style.top="-300px";
-    }
-    function tocar2(){
-      caja2.style.top="0px";
-    }
+    let caja1 = document.querySelector(".contenedor1");
+    let caja3 = document.querySelector(".armadura1");
+
+    let caja4 = document.querySelector(".contenedor2")
+    let caja5 = document.querySelector(".armadura2")
+
+    let caja6 = document.querySelector(".contenedor3");
+    let caja7 = document.querySelector(".armadura3");
+
+    let caja8 = document.querySelector(".contenedor4");
+    let caja9 = document.querySelector(".armadura4")
+    //primera caja
+    let audio = new Audio('pegaso.mp3')
+    let audio1 =new Audio('shiryu.mp3')
+    caja.addEventListener("click",i=>{ caja2.style.top="300px"; ;
+      audio.play();});
+    caja.addEventListener("dblclick",i => {caja2.style.top="635px";
+  audio.pause()});
+   
+    //segunda caja
+    caja1.addEventListener("click",i =>{caja3.style.top = "300px";
+    audio1.play();
+
+  });
+    caja1.addEventListener("dblclick",i => {caja3.style.top = "635px"
+  audio1.pause();});
+
+    //tercera caja
+    caja4.addEventListener("click",i =>{caja5.style.top = "300px"});
+    caja4.addEventListener("dblclick",i => {caja5.style.top = "635px"});
+
+    //cuarta caja
+    caja6.addEventListener("click",i =>{caja7.style.top = "300px"});
+    caja6.addEventListener("dblclick",i => {caja7.style.top = "635px"});
+
+     //quinta caja
+    caja8.addEventListener("click",i =>{caja9.style.top = "300px"});
+    caja8.addEventListener("dblclick",i => {caja9.style.top = "635px"});
 
 
   </script>
